@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 import axios from 'axios';
 
 export default class MovieList extends Component {
@@ -10,6 +11,7 @@ export default class MovieList extends Component {
   }
 
   componentDidMount() {
+	console.log("MovieList did mount")
     axios
       .get('http://localhost:5000/api/movies')
       .then(response => {
