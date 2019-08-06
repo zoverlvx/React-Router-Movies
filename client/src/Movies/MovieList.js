@@ -14,7 +14,7 @@ export default class MovieList extends Component {
 
   componentDidMount() {
     axios
-      .get('https://lambda-school-zoverlvx.c9users.io:8080/api/movies')
+      .get("https://for-students-gcbyb.run.goorm.io:5000/api/movies")
       .then(response => {
         this.setState(() => ({ movies: response.data }));
       })

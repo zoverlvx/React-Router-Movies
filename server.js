@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const CORS = require('cors');
+const PORT = 5000;
 
 const app = express();
 
@@ -66,6 +67,6 @@ app.post('/api/movies', (req, res) => {
 	res.status(201).json(movies);
 });
 
-app.listen(process.env.PORT, () => {
-	console.log(`Server listening on port ${process.env.PORT}`);
+app.listen(PORT, () => {
+	console.log(`Server listening on port ${PORT}`);
 });
